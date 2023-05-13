@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+}
 .wrapper {
   background: rgb(238, 174, 202);
   background: radial-gradient(
@@ -16,34 +19,36 @@
 .calculator {
   min-height: 70vh;
   display: grid;
-
+  font-family: "Orbitron", sans-serif;
   border-radius: 26px;
   background: #cbb4c1;
-  box-shadow: 28px 28px 79px #6c5f66, -28px -28px 79px #ffffff;
+  box-shadow: 28px 28px 79px #b92b77, -28px -28px 79px #23368a;
   gap: 5px;
   padding: 15px;
-  grid-template-columns: 90px 90px 90px 90px;
-  grid-template-areas:
-    "text text text text"
-    "display display display display ";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .calculator > div:not([name="text"]) {
   background-color: #343c6c;
   display: flex;
   padding: 5px;
+
   color: white;
   font-size: 2rem;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
 }
+
 .text {
-  grid-area: text;
+  grid-column: span 4;
+
   font-size: 2rem;
   color: #343c6c;
 }
 .item1 {
-  grid-area: display;
+  grid-column: span 4;
+
   height: 70px;
   background: linear-gradient(
     90deg,
@@ -56,6 +61,11 @@
 }
 
 .item21 {
+  grid-column: span 2;
+  padding: 0;
+  /* background-color: rgb(99, 107, 128) !important; */
+}
+#equals {
   background-color: rgb(99, 107, 128) !important;
 }
 button {
