@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <div class="wrapper">
+      <div class="calculator">
+        <div class="text" name="text">Casio</div>
+        <div class="item1">
+          <p id="output">0</p>
+        </div>
+
+        <div class="item2" onclick="clearData()">AC</div>
+        <div class="item3">C</div>
+        <div class="item4">
+          <button id="percent" value="%" onclick="percentFunction()">%</button>
+        </div>
+        <div class="item5">
+          <button id="divide" value="/" onclick="divideFunction()">/</button>
+        </div>
+        <div class="item6">
+          <button id="button7" value="7" onclick="showData7()">7</button>
+        </div>
+        <div class="item7">
+          <button id="button8" value="8" onclick="showData8()">8</button>
+        </div>
+        <div class="item8">
+          <button id="button9" value="9" onclick="showData9()">9</button>
+        </div>
+        <div class="item9">
+          <button id="multiple" value="*" onclick="multiplyFunction()">
+            *
+          </button>
+        </div>
+        <div class="item10">
+          <button id="button4" value="4" onclick="showData4()">4</button>
+        </div>
+        <div class="item11">
+          <button id="button5" value="5" onclick="showData5()">5</button>
+        </div>
+        <div class="item12">
+          <button id="button6" value="6" onclick="showData6()">6</button>
+        </div>
+
+        <div class="item13">
+          <button id="subtractFunction" value="-" onclick="subtractFunction()">
+            -
+          </button>
+        </div>
+        <div class="item17">
+          <button id="button1" value="1" onclick="showData1()">1</button>
+        </div>
+        <div class="item14">
+          <button id="button2" value="2" onclick="showData2()">2</button>
+        </div>
+        <div class="item15">
+          <button id="button3" value="3" onclick="showData3()">3</button>
+        </div>
+        <div class="item16">
+          <button id="addFunction" value="+" onclick="addFunction()">+</button>
+        </div>
+
+        <div class="item18">
+          <button id="button0" value="0" onclick="showData0()">0</button>
+        </div>
+        <div class="item19">
+          <button id="del" value="" onclick="del()">DEL</button>
+        </div>
+        <div class="item20">
+          <button id="decimal" value="." onclick="decimal()">.</button>
+        </div>
+        <div class="item21">
+          <button id="equals" onclick="equals()">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
