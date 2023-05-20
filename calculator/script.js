@@ -57,6 +57,7 @@ showData9 = () => {
   document.getElementById("output").innerHTML = x;
 };
 showData0 = () => {
+  var a = 0;
   var a = document.getElementById("button0").value;
   x = x + a;
   document.getElementById("output").innerHTML = x;
@@ -82,11 +83,24 @@ clearData = () => {
 //var sum = null;
 addFunction = () => {
   var a = document.getElementById("addFunction").value;
+  const l = x.length;
+  const y = l - 1;
+  const c = x.charAt(y);
+  console.log(c);
+  if (c == "+") {
+    return c;
+  } else {
+    if (!isNaN(parseFloat(x))) {
+      document.getElementById("output").innerHTML = x + a;
+      x = x + a;
+      console.log(x);
+      console.log(parseFloat(x));
+    }
+  }
 
-  document.getElementById("output").innerHTML = x + a;
-  console.log(a);
-  console.log(x);
-  x = x + a;
+  //console.log(a);
+  //console.log(x);
+
   //   console.log(`the value of one is ` + one);
   //   console.log(`the value of two is ` + two);
   //   console.log(`sum of one and two is ` + one + ` + ` + two);
@@ -102,8 +116,22 @@ addFunction = () => {
 //var sub = 0;
 subtractFunction = () => {
   var a = document.getElementById("subtractFunction").value;
-  document.getElementById("output").innerHTML = x + a;
-  x = x + a;
+  const l = x.length;
+  const y = l - 1;
+  const c = x.charAt(y);
+  console.log(c);
+
+  if (c == "+") {
+    return c;
+  } else {
+    if (!isNaN(parseFloat(x))) {
+      document.getElementById("output").innerHTML = x + a;
+      x = x + a;
+      console.log(x);
+      console.log(parseFloat(x));
+    }
+  }
+
   //console.log(a);
   // console.log(x);
   //   console.log(`the value of one is ` + one);
@@ -144,13 +172,17 @@ divideFunction = () => {
 };
 percentFunction = () => {
   var a = document.getElementById("percent").value;
-  document.getElementById("output").innerHTML = (x + a) / 100;
+  document.getElementById("output").innerHTML = x + a;
   x = x + a;
 };
 equals = () => {
-  var value = document.getElementById("output").innerHTML;
-  var ans = eval(value);
-  console.log(ans);
-  document.getElementById("output").innerHTML = ans;
-  x = ans;
+  try {
+    var value = document.getElementById("output").innerHTML;
+    var ans = eval(value);
+    console.log(ans);
+    document.getElementById("output").innerHTML = ans;
+    x = ans;
+  } catch (e) {
+    HTMLFormControlsCollection.log("error");
+  }
 };
